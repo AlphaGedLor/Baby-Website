@@ -1,0 +1,45 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$title-text-color: #d4aa00;
+$title-background-color: rgb(25, 154, 91);
+$title-border: white solid 10px;
+$kicker-color: white;
+$div-info-box-background-color: rgb(12, 203, 192);
+$text-color: #e8961e;
+$form-button-color: #2a7ae2;
+$footerbanner-background-color: #390c19;
+$form-text-color: white;
+$footer-top-border: 10px solid #897623;
+$footer-text-color: rgb(227, 198, 8);
+$background-base-color: rgb(48, 93, 44);
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$on-palm:          600px;
+$on-laptop:        800px;
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        'bourbon/bourbon',
+        'normalize',
+        "infoandrsvp",
+        'parallax'
+;
