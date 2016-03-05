@@ -27,7 +27,7 @@ function castParallax() {
 		for (var i = 0; i < layers.length; i++) {
 			layer = layers[i];
 			speed = layer.getAttribute('data-speed');
-			var yPos = -(top * speed / 100);
+			yPos = -(top * speed / 100);
 			layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
 
 		}
@@ -61,17 +61,7 @@ function startSite() {
 	else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1)
 	{
 		castParallax();
-		if ($.browser.webkit)
-		{
-			castSmoothScroll();
-		}
-	}
-
-	else
-	{
-		castParallax();
-	}
-
+		castSmoothScroll();
 }
-
+}
 document.body.onload = startSite();

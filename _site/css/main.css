@@ -7,6 +7,13 @@ dl, dd, ol, ul, figure, html {
   margin: 0;
   padding: 0; }
 
+html {
+  background-color: #210002;
+  text-align: center; }
+
+h1, h2, h3, h4 {
+  text-transform: uppercase; }
+
 /**
  * Basic styling
  */
@@ -122,12 +129,19 @@ hr {
   border: 2px solid #2af517;
   width: 80%; }
 
+#maincontainer {
+  background-color: #0b2f0e;
+  position: relative;
+  z-index: 40; }
+
 .maincontain {
   display: flex;
   flex-flow: row wrap;
-  background-color: #305d2c;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+  z-index: 41;
+  position: relative;
+  background-color: #0b2f0e; }
 
 .Infobox {
   background-color: #2314ee;
@@ -155,6 +169,12 @@ hr {
 .keyart, .keyart_layer {
   height: 1000px; }
 
+#parallax {
+  display: block; }
+
+#nonparallax {
+  display: none; }
+
 #nonparallax {
   background-image: url("../assets/img/keyart-mobile.jpg");
   background-position: center;
@@ -172,7 +192,7 @@ hr {
   width: 100%;
   position: absolute; }
 
-.keyart_layer .parallax {
+.keyart_layer.parallax {
   position: fixed; }
 
 #keyart-0 {
