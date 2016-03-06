@@ -2,11 +2,13 @@ h2
   font:
     size: 60px
     weight: 800
+    family: 'Lobster'
   letter-spacing: 3px
   padding: 15px
   margin-top: 15px
+  color: $text-color
 hr
-  border: 2px solid rgb(42, 245, 23)
+  border: 2px solid $text-color
   width: 80%
   margin: 5px
 #maincontainer
@@ -14,6 +16,7 @@ hr
   position: relative
   z-index: 40
   // top: -200px
+  color: $text-color
 .maincontain
   display: flex
   flex-flow: column nowrap
@@ -23,7 +26,7 @@ hr
   position: relative
   background-color: #021203
 .Infobox
-  background-color: rgb(35, 20, 238)
+  background-color: $div-info-box-background-color
   display: flex
   flex-flow: column
   align-items: center
@@ -31,21 +34,29 @@ hr
   align-content: center
   width: 600px
   height: 600px
+  +border-radius (15px)
+  margin-bottom: 15px
+  border: $title-border
   & p
     font-size: 18px
     font-weight: bold
+    // font-family: 'Lobster'
+    letter-spacing: 1px
+    line-height: 22px
     width: 60%
-    text-align: justify
+    text-align: center
 .rsvpbox
-  background-color: rgb(111, 23, 147)
+  background-color: $div-info-box-background-color
   display: flex
   flex-flow: column
   align-items: center
   justify-content: center
   align-content: center
+  border: $title-border
   width: 600px
   height: 800px
   font-weight: bold
+  +border-radius (15px)
 .form
   display: flex
   flex-flow: column nowrap
@@ -55,7 +66,7 @@ hr
   padding-bottom: 50px
 input
   background: none
-  color: $form-text-color
+  color: $text-color
   padding: 5px 20px
   font-size: 18px
   display: inline-block
@@ -68,14 +79,15 @@ input
     border: none
     border-bottom: solid 2px  $form-button-color
 button
+  outline: none
   font-size: 18px
   font-weight: bold
   letter-spacing: 2px
   padding: 5px 40px
-  margin-top: 10px
-  background: white
-  color: $form-button-color
-  border: solid 2px $form-button-color
+  margin-top: 25px
+  background: $text-color
+  color: white
+  border: solid 2px $text-color
   +border-radius(5px)
   &[type="submit"]
     &:active
@@ -87,14 +99,13 @@ button
   position: relative
   input
     padding: 15px 0px
-
   label
     +position(absolute, 50% null null 0px)
     +transform(translateY(-50%))
     font:
       style: italic
       size: 18px
-    color: $form-text-color
+    color: $text-color
     pointer-events: none
     +transition
   input:focus + label,
@@ -102,14 +113,20 @@ button
     top: 5px
     font-size: 10px
     color: $form-text-color
-+media-query(450px)
+
+.contact
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-flow: column nowrap
+
++media-query(500px)
   h2
     font-size: 2em
     font-weight: 400px
     letter-spacing: 2px
     padding: 8px
     margin-top: 8px
-
   .Infobox
     & p
       width: 40%
@@ -118,3 +135,10 @@ button
     height: 900px
     & p
       width: 60%
+      font-size: 10px
+  .contact
+    // flex-flow: row
+    & p
+      // text-align: center
+      width: 100%
+      font-size: 14px

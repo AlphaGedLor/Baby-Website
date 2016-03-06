@@ -32,7 +32,7 @@
 	position: fixed;
 }
 	#keyart-0 {
-		background-image: url('../assets/img/parallax0.png');
+		background-image: url('../assets/img/parallax0-new.png');
 		background-color: #ffaf1b;
 	}
 	#keyart-1 {
@@ -62,5 +62,52 @@
 	}
 	#parallax {
 		display: none;
+	}
+}
+.title-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	height: 500px;
+	width: 100%;
+	position: absolute;
+}
+.title-Bshower {
+	align-self: center;
+	position: relative;
+	z-index: 20;
+	width: 50%;
+	min-width: 50%;
+	border: $title-border;
+	@include border-radius (15px);
+	background-color: $title-background-color;
+}
+	h1 {
+		margin: 20px;
+		font-family: 'Lobster';
+		line-height: 1.05;
+		letter-spacing: 2px;
+		color: $title-text-color;
+
+	}
+@include media-query(700px){
+	h1 {
+		font-size: 50px;
+	}
+}
+@include media-query(600px){
+	h1 {
+		font-size: 35px;
+	}
+	.title-Bshower {
+		background: none;
+		border: none;
+		@include border-radius (0px) ;
+	}
+}
+@include media-query(350px){
+	h1 {
+		font-size: 25px;
 	}
 }
