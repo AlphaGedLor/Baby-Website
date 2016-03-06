@@ -8,20 +8,20 @@ h2
 hr
   border: 2px solid rgb(42, 245, 23)
   width: 80%
-
+  margin: 5px
 #maincontainer
-  background-color: #0b2f0e
+  background-color: #021203
   position: relative
   z-index: 40
   // top: -200px
 .maincontain
   display: flex
-  flex-flow: row wrap
+  flex-flow: column nowrap
   justify-content: space-around
   align-items: center
   z-index: 41
   position: relative
-  background-color: #0b2f0e
+  background-color: #021203
 .Infobox
   background-color: rgb(35, 20, 238)
   display: flex
@@ -32,6 +32,8 @@ hr
   width: 600px
   height: 600px
   & p
+    font-size: 18px
+    font-weight: bold
     width: 60%
     text-align: justify
 .rsvpbox
@@ -39,7 +41,80 @@ hr
   display: flex
   flex-flow: column
   align-items: center
-  justify-content: flex-start
+  justify-content: center
   align-content: center
   width: 600px
-  height: 600px
+  height: 800px
+  font-weight: bold
+.form
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: center
+  align-content: center
+  padding-bottom: 50px
+input
+  background: none
+  color: $form-text-color
+  padding: 5px 20px
+  font-size: 18px
+  display: inline-block
+  width: 300px
+  &:focus,
+  &:active
+    outline: none
+  &[type="text"],
+  &[type="email"]
+    border: none
+    border-bottom: solid 2px  $form-button-color
+button
+  font-size: 18px
+  font-weight: bold
+  letter-spacing: 2px
+  padding: 5px 40px
+  margin-top: 10px
+  background: white
+  color: $form-button-color
+  border: solid 2px $form-button-color
+  +border-radius(5px)
+  &[type="submit"]
+    &:active
+      color: white
+      background-color: $form-button-color
+.input-group
+  display: flex
+  flex-flow: column nowrap
+  position: relative
+  input
+    padding: 15px 0px
+
+  label
+    +position(absolute, 50% null null 0px)
+    +transform(translateY(-50%))
+    font:
+      style: italic
+      size: 18px
+    color: $form-text-color
+    pointer-events: none
+    +transition
+  input:focus + label,
+  input.has-value + label
+    top: 5px
+    font-size: 10px
+    color: $form-text-color
++media-query(450px)
+  h2
+    font-size: 2em
+    font-weight: 400px
+    letter-spacing: 2px
+    padding: 8px
+    margin-top: 8px
+
+  .Infobox
+    & p
+      width: 40%
+  .rsvpbox
+    justify-content: flex-start
+    height: 900px
+    & p
+      width: 60%
