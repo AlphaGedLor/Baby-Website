@@ -2,6 +2,7 @@
   "name": "bshower",
   "version": "1.0.0",
   "description": "Baby Shower",
+  "dev":"Jquery, Jquery smooth scroll, jquery mousewheel",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
   },
